@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>FUTURISTIC TODO</h1>
+      </div>
+
+      <div class="form-container">
+        <form id="todoForm">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="taskName">Task Name</label>
+              <input
+                type="text"
+                id="taskName"
+                placeholder="Enter your task..."
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="taskDate">Date</label>
+              <input
+                type="date"
+                id="taskDate"
+                required
+                style="color-scheme: dark"
+              />
+            </div>
+            <div class="input-group">
+              <label for="taskStatus">Status</label>
+              <select id="taskStatus" required>
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <button type="submit" class="btn" id="addBtn">
+              <span id="btnText">ADD TASK</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="controls">
+        <div class="filter-group">
+          <label for="filterDate">Filter by Date:</label>
+          <input
+            type="date"
+            id="filterDate"
+            class="filter"
+            style="color-scheme: dark"
+          />
+          <label for="filterStatus">Filter by Status:</label>
+          <div class="ctnselect">
+            <select id="filterStatus" class="filtersel">
+              <option value="">All Status</option>
+              <option value="pending">Pending</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-small" id="clearFilter">
+            CLEAR
+          </button>
+        </div>
+        <button type="button" class="btn btn-danger" id="deleteAllBtn">
+          DELETE ALL
+        </button>
+      </div>
+
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Task Name</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="taskTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
